@@ -7,11 +7,6 @@ const connection = mysql.createConnection({
     database: "node"
 });
 
-const dropTable = "DROP TABLE IF EXISTS peoples";
-
-connection.query(dropTable);
-
-const sql = "CREATE TABLE peoples (id int not null primary key auto_increment, name VARCHAR(255))";
-
-connection.query(sql);
+connection.query("DROP TABLE IF EXISTS peoples");
+connection.query("CREATE TABLE peoples (id int not null primary key auto_increment, name VARCHAR(255))");
 connection.end();

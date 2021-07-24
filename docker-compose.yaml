@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.0'
 
 services: 
     nodejs:
@@ -8,6 +8,7 @@ services:
             - app
         volumes: 
             - ./nodejs:/usr/src/app
+        command: bash -c "npm install && node migration.js && node index.js"
         depends_on:
             - nodedb
     nginx:
