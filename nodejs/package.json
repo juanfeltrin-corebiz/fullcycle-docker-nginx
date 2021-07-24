@@ -1,0 +1,14 @@
+{
+    "name": "Desafio Full Cycle",
+    "version": "0.0.1",
+    "description": "Node.js on Docker",
+    "author": "Juan Feltrin",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "express": "^4.16.1",
+      "mysql": "2.18.1"
+    }
+  }
