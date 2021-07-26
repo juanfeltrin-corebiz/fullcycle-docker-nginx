@@ -9,6 +9,7 @@ services:
         volumes: 
             - ./nodejs:/usr/src/app
         command: bash -c "npm install && node migration.js && node index.js"
+        restart: on-failure
         depends_on:
             - nodedb
     nginx:
