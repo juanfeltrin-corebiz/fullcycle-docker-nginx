@@ -19,6 +19,7 @@ services:
             - "8080:80"
         networks: 
             - app
+        restart: on-failure
         depends_on:
             - nodejs
     nodedb:
